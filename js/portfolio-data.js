@@ -4,12 +4,12 @@
 
 const portfolioProjects = [
     {
-        id: 'parkour-game',
-        title: 'First-Person Parkour Game',
-        description: 'A dynamic parkour experience built in Unreal Engine 5 using Gameplay Ability System with custom camera mechanics and feedback systems.',
-        image: 'images/parkour-game.png',
+        id: 'Massacrade',
+        title: 'Massacrade',
+        description: 'a First-Person Melee Slasher with dynamic parkour built in Unreal Engine 5',
+        image: 'images/Massacrade.png',
         tags: ['Unreal Engine 5', 'Game Design', 'Blueprint'],
-        projectPage: 'projects/parkour-game/index.html'
+        projectPage: 'projects/Massacrade/index.html'
     },
     {
         id: 'project-2',
