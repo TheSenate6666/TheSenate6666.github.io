@@ -8,16 +8,17 @@ const portfolioProjects = [
         title: 'Massacrade',
         description: 'a First-Person Melee Slasher with dynamic parkour built in Unreal Engine 5',
         image: 'images/Massacrade.png',
-        tags: ['Unreal Engine 5', 'Game Design', 'Blueprint'],
+        tags: ['Unreal Engine 5', 'Game Design', 'Blueprint', 'GAS', 'C++'],
         projectPage: 'projects/Massacrade/index.html'
     },
     {
-        id: 'project-2',
-        title: 'Project Title 2',
-        description: 'Brief description of your second project goes here.',
-        image: 'images/project-2.png',
-        tags: ['Tag1', 'Tag2'],
-        projectPage: 'projects/project-2/index.html'
+        id: 'WizzDarts',
+        title: 'WizzDarts',
+        description: 'Use your wizard skills to sabotage your opponent and adjust to  wildly increasing challenges in 
+        Wizzdarts, the most chaotic game of Darts you'll ever play!',
+        image: 'images/WizzDarts.png',
+        tags: ['Unity', 'Nintendo Switch', 'Motion Controls', 'CouchCoop'],
+        projectPage: 'projects/WizzDarts/index.html'
     },
     {
         id: 'project-3',
