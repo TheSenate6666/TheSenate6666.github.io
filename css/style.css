@@ -1,0 +1,472 @@
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+.logo .role {
+    font-size: 13px;
+    color: #888;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.navigation {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.nav-link.active {
+    color: #000;
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #000;
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    min-height: calc(100vh - 200px);
+}
+
+/* ============================================
+   PORTFOLIO SECTION
+   ============================================ */
+
+.portfolio-section {
+    width: 100%;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    grid-auto-rows: auto;
+}
+
+/* Alternate layout: 2 column on larger screens */
+@media (min-width: 1000px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   PORTFOLIO CARDS
+   ============================================ */
+
+.portfolio-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-card-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    background-color: #f0f0f0;
+    display: block;
+}
+
+.portfolio-card-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.portfolio-card-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.portfolio-card-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.portfolio-tag {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+
+.about-section {
+    max-width: 800px;
+}
+
+.about-section h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* ============================================
+   RESUME PAGE
+   ============================================ */
+
+.resume-section {
+    max-width: 900px;
+}
+
+.resume-section h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+.resume-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.resume-embed {
+    width: 100%;
+    height: 800px;
+    border: none;
+}
+
+.resume-download {
+    display: inline-block;
+    margin-bottom: 24px;
+    padding: 12px 24px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.resume-download:hover {
+    background-color: #333;
+}
+
+/* ============================================
+   CONTACT PAGE
+   ============================================ */
+
+.contact-section {
+    max-width: 600px;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item a {
+    font-size: 16px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   PROJECT DETAIL PAGE
+   ============================================ */
+
+.project-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.project-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+.project-meta {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 24px;
+}
+
+.project-intro {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+}
+
+.project-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-section {
+    margin-bottom: 60px;
+}
+
+.project-section h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.project-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.project-image {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 24px 0;
+}
+
+.project-video,
+.project-gif {
+    width: 100%;
+    max-height: 600px;
+    border-radius: 8px;
+    margin: 24px 0;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 10px 16px;
+    background-color: #f0f0f0;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #e0e0e0;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+    padding: 40px;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .main-content {
+        padding: 40px 20px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .portfolio-card-image {
+        height: 200px;
+    }
+
+    .project-title {
+        font-size: 28px;
+    }
+
+    .resume-content {
+        padding: 20px;
+    }
+
+    .resume-embed {
+        height: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .logo .role {
+        font-size: 11px;
+    }
+
+    .navigation {
+        gap: 12px;
+    }
+
+    .nav-link {
+        font-size: 10px;
+    }
+
+    .nav-link.active::after {
+        bottom: -4px;
+        height: 1px;
+    }
+
+    .portfolio-card-image {
+        height: 150px;
+    }
+
+    .portfolio-card-content {
+        padding: 16px;
+    }
+
+    .portfolio-card-title {
+        font-size: 14px;
+    }
+
+    .portfolio-card-description {
+        font-size: 12px;
+    }
+}
