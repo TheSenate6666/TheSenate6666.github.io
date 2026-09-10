@@ -470,35 +470,48 @@ body {
     .portfolio-card-description {
         font-size: 12px;
     }
+
+   
+@media (max-width: 480px) {
+    .logo h1 { font-size: 20px; }
+    .logo .role { font-size: 11px; }
+    .navigation { gap: 12px; }
+    .nav-link { font-size: 10px; }
+    .nav-link.active::after { bottom: -4px; height: 1px; }
+    .portfolio-card-image { height: 150px; }
+    .portfolio-card-content { padding: 16px; }
+    .portfolio-card-title { font-size: 14px; }
+    .portfolio-card-description { font-size: 12px; }
+} /* <--- FIXED: Closing bracket added here */
+
 /* ============================================
    HERO VIDEO SECTION
    ============================================ */
 
 .hero-video-section {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
     background: #000;
+    overflow: hidden;
 }
 
 .hero-video-container {
     position: relative;
     width: 100%;
-    /* Changed from 600px to calc(100vh - 70px) to make it fullscreen 
-       while accounting for your sticky header so it doesn't overlap perfectly */
-    height: calc(100vh - 70px); 
-    overflow: hidden;
+    height: 80vh; /* Adjust height percentage of screen as preferred */
     background: #000;
+    overflow: hidden;
 }
 
-/* Bulletproof background video styling */
 .hero-bg-video {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: translate(-50%, -50%);
     display: block;
 }
 
@@ -508,7 +521,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -535,29 +548,10 @@ body {
 .hero-video-button:hover {
     background-color: #f0f0f0;
     transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
-    .hero-video-container {
-        height: 60vh; /* Adjusts proportionally on smaller screens */
-    }
-
-    .hero-video-button {
-        padding: 12px 40px;
-        font-size: 13px;
-    }
-}
-
-/* Mobile */
 @media (max-width: 768px) {
     .hero-video-container {
         height: 50vh;
-    }
-
-    .hero-video-button {
-        padding: 11px 36px;
-        font-size: 12px;
     }
 }
