@@ -475,8 +475,8 @@ body {
    ============================================ */
 
 .hero-video-section {
-    width: 100%;
-    margin: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     padding: 0;
     background: #000;
 }
@@ -484,8 +484,7 @@ body {
 .hero-video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (1280x720) */
-    height: 0;
+    height: 600px;
     overflow: hidden;
     background: #000;
 }
@@ -506,7 +505,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -515,33 +514,59 @@ body {
 
 .hero-video-button {
     display: inline-block;
-    padding: 16px 40px;
+    padding: 14px 48px;
     background-color: #fff;
     color: #000;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 50px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     transition: all 0.3s ease;
-    border: 2px solid #fff;
+    border: none;
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .hero-video-button:hover {
-    background-color: transparent;
-    color: #fff;
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
-@media (max-width: 768px) {
+/* Tablet */
+@media (max-width: 1024px) {
+    .hero-video-container {
+        height: 500px;
+    }
+
     .hero-video-button {
-        padding: 12px 30px;
-        font-size: 14px;
+        padding: 12px 40px;
+        font-size: 13px;
     }
 }
 
-@media (max-width: 480px) {
+/* Tablet - smaller */
+@media (max-width: 768px) {
+    .hero-video-container {
+        height: 400px;
+    }
+
     .hero-video-button {
-        padding: 10px 24px;
+        padding: 11px 36px;
         font-size: 12px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .hero-video-container {
+        height: 280px;
+    }
+
+    .hero-video-button {
+        padding: 10px 30px;
+        font-size: 11px;
     }
 }
