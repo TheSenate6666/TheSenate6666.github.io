@@ -470,19 +470,9 @@ body {
     .portfolio-card-description {
         font-size: 12px;
     }
-
+}
    
-@media (max-width: 480px) {
-    .logo h1 { font-size: 20px; }
-    .logo .role { font-size: 11px; }
-    .navigation { gap: 12px; }
-    .nav-link { font-size: 10px; }
-    .nav-link.active::after { bottom: -4px; height: 1px; }
-    .portfolio-card-image { height: 150px; }
-    .portfolio-card-content { padding: 16px; }
-    .portfolio-card-title { font-size: 14px; }
-    .portfolio-card-description { font-size: 12px; }
-} /* <--- FIXED: Closing bracket added here */
+
 
 /* ============================================
    HERO VIDEO SECTION
