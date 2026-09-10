@@ -484,12 +484,18 @@ body {
 .hero-video-container {
     position: relative;
     width: 100%;
-    height: 600px;
+    /* Changed from 600px to calc(100vh - 70px) to make it fullscreen 
+       while accounting for your sticky header so it doesn't overlap perfectly */
+    height: calc(100vh - 70px); 
     overflow: hidden;
     background: #000;
 }
 
-.hero-video-container video {
+/* Bulletproof background video styling */
+.hero-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -535,7 +541,7 @@ body {
 /* Tablet */
 @media (max-width: 1024px) {
     .hero-video-container {
-        height: 500px;
+        height: 60vh; /* Adjusts proportionally on smaller screens */
     }
 
     .hero-video-button {
@@ -544,26 +550,14 @@ body {
     }
 }
 
-/* Tablet - smaller */
+/* Mobile */
 @media (max-width: 768px) {
     .hero-video-container {
-        height: 400px;
+        height: 50vh;
     }
 
     .hero-video-button {
         padding: 11px 36px;
         font-size: 12px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    .hero-video-container {
-        height: 280px;
-    }
-
-    .hero-video-button {
-        padding: 10px 30px;
-        font-size: 11px;
     }
 }
