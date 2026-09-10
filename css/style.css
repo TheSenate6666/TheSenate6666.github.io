@@ -513,9 +513,22 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
     display: flex;
+    flex-direction: column; /* Stack title on top of button */
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end; /* Push content to the bottom */
+    padding-bottom: 48px; /* Gap between button and video bottom */
     z-index: 10;
+    text-align: center;
+}
+
+.hero-video-title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7); /* Subtle glow to ensure legibility on light video backgrounds */
 }
 
 .hero-video-button {
@@ -541,7 +554,12 @@ body {
 }
 
 @media (max-width: 768px) {
-    .hero-video-container {
-        height: 50vh;
+    .hero-video-overlay {
+        padding-bottom: 24px;
+    }
+
+    .hero-video-title {
+        font-size: 20px;
+        margin-bottom: 12px;
     }
 }
