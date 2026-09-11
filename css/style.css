@@ -122,8 +122,8 @@ body {
 }
 
 .profile-picture {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     object-fit: cover; /* Ensures the image doesn't stretch */
     border-radius: 50%; /* Makes the image a circle */
     margin-bottom: 20px;
