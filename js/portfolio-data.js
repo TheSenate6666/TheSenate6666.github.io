@@ -18,22 +18,6 @@ const portfolioProjects = [
         image: 'images/WizzDarts.png',
         tags: ['Unity', 'Nintendo Switch', 'Motion Controls', 'CouchCoop'],
         projectPage: 'projects/WizzDarts/index.html'
-    },
-    {
-        id: 'project-3',
-        title: 'Project Title 3',
-        description: 'Brief description of your third project goes here.',
-        image: 'images/project-3.png',
-        tags: ['Tag1', 'Tag2', 'Tag3'],
-        projectPage: 'projects/project-3/index.html'
-    },
-    {
-        id: 'project-4',
-        title: 'Project Title 4',
-        description: 'Brief description of your fourth project goes here.',
-        image: 'images/project-4.png',
-        tags: ['Tag1', 'Tag2'],
-        projectPage: 'projects/project-4/index.html'
     }
 ];
 
