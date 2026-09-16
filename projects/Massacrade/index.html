@@ -42,7 +42,7 @@
                     <iframe 
                         width="100%" 
                         height="600" 
-                        src="https://youtu.be/Z23ZEtse-Ls" 
+                        src="https://www.youtube.com/embed/Z23ZEtse-Ls" 
                         title="Massacrade Gameplay" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -57,15 +57,16 @@
                 
                 <h4>Breakdown</h4>
                 <p>
-                    Massacrade is a first-person parkour melee slasher set in an Elegant city where you take control of Evelyn, 
-                    a brutal rogue assassin on the run, using her acrobatic movement and combat expertise to escape.
+                    Massacrade is a first-person parkour melee slasher set in an elegant city where you take control of Evelyn, 
+                    a brutal rogue assassin on the run, using her acrobatic movement and combat expertise to escape. The game 
+                    combines fluid parkour mechanics with intense melee combat, creating a unique blend of traversal and combat 
+                    gameplay that demands both precision and creativity from the player.
                 </p>
-                <ul class="project-list">
-                    <li>Add your bullet point #1 here</li>
-                    <li>Add your bullet point #2 here</li>
-                    <li>Add your bullet point #3 here</li>
-                    <li>Add your bullet point #4 here</li>
-                </ul>
+                <p>
+                    The core loop revolves around navigating through verticality-rich environments, engaging enemies with visceral 
+                    combat encounters, and escaping through a combination of parkour skills and tactical positioning. Every movement 
+                    feels weighty and deliberate, while combat feedback systems reinforce the impact of each strike and evasion.
+                </p>
             </div>
 
             <!-- Section 3: Technical Details -->
@@ -77,49 +78,90 @@
                     <strong>Key Systems:</strong> Gameplay Ability System, Character Controller, Camera Mode Stack<br>
                     <strong>Team Size:</strong> Core team of 5, 3 Sound engineers, 2 Directors<br>
                     <strong>Type:</strong> 6th Semester Project<br>
-                    <strong>Production Period:</strong> 4 months<br>
-                   
+                    <strong>Production Period:</strong> 4 months
                 </p>
             </div>
 
-            <!-- Section 5: Game Design -->
+            <!-- Section 4: Game Design -->
             <div class="project-section">
                 <h3>Game Design</h3>
                 <p>
-                    [Add your game design philosophy here]
+                    The design philosophy behind Massacrade centers on creating a seamless experience where movement and combat 
+                    feel like extensions of each other. Rather than separating traversal from encounters, we integrated them into 
+                    a unified system where the player's parkour skills directly influence their combat capabilities and escape options.
                 </p>
-                <ul class="project-list">
-                    <li><strong>Player Feedback:</strong> [Describe your feedback systems]</li>
-                    <li><strong>Level Design:</strong> [Explain your level design approach]</li>
-                    <li><strong>Game Feel:</strong> [Describe the feel and polish]</li>
-                    <li><strong>Learning Curve:</strong> [Explain tutorials/onboarding]</li>
-                </ul>
+                <p>
+                    <strong>Player Feedback:</strong> Every action receives immediate visual, audio, and haptic feedback. Successful 
+                    parkour movements trigger satisfying animations and sound design, while combat strikes produce impactful visuals 
+                    and screen shake. Failed movements result in clear, predictable consequences that teach the player without frustration.
+                </p>
+                <p>
+                    <strong>Level Design:</strong> Our levels are designed with verticality and flow in mind. Multiple pathways encourage 
+                    player experimentation, and environmental design naturally teaches mechanics through exploration. Sight lines guide 
+                    players toward objectives while allowing skilled players to discover shortcuts and alternative routes.
+                </p>
+                <p>
+                    <strong>Game Feel:</strong> Polish was a critical focus throughout development. Animations blend smoothly, the camera 
+                    remains responsive to player input, and the overall feel communicates player agency at all times. We prioritized 
+                    making the game feel responsive rather than weighty, encouraging aggressive, flowing play.
+                </p>
             </div>
 
-             <!-- Section 4: Technical Design -->
+            <!-- Section 5: Technical Design -->
             <div class="project-section">
                 <h3>Technical Design</h3>
                 <p>
-                    [Add your technical design overview here]
+                    The technical foundation of Massacrade is built on the Gameplay Ability System, which provides a scalable framework 
+                    for managing abilities, effects, and gameplay interactions. This approach allowed us to rapidly prototype and iterate 
+                    on mechanics while maintaining clean, data-driven design.
                 </p>
-                <ul class="project-list">
-                    <li><strong>Gameplay Ability System (GAS):</strong> [Explain your GAS implementation]</li>
-                    <li><strong>Camera System:</strong> [Explain your camera design]</li>
-                    <li><strong>Movement Mechanics:</strong> [Explain your parkour mechanics]</li>
-                    <li><strong>Input Handling:</strong> [Explain your input system]</li>
-                </ul>
+                <p>
+                    <strong>Gameplay Ability System (GAS):</strong> All character abilities—from basic movement to combat attacks—are implemented 
+                    as GAS abilities. This unified system enables easy replication for networked play, consistent cooldown management, and 
+                    modular ability design that scales with the project complexity.
+                </p>
+                <p>
+                    <strong>Camera System:</strong> We developed a sophisticated camera mode stack that dynamically switches between multiple 
+                    camera configurations based on character state. The camera responds to movement intensity, combat encounters, and player 
+                    input, always prioritizing visibility and communicating game state through positioning and animation.
+                </p>
+                <p>
+                    <strong>Movement Mechanics:</strong> The parkour system includes running, jumping, wall running, climbing, vaulting, and 
+                    sliding. Each ability is carefully tuned for responsiveness, with input buffering to anticipate player actions and create 
+                    the feeling of tight, precise controls even in complex movement chains.
+                </p>
+                <p>
+                    <strong>Combat Integration:</strong> Combat abilities are seamlessly integrated with movement through a state machine that 
+                    determines valid attack windows, recovery times, and momentum preservation. Players can chain attacks into movement or vice 
+                    versa, creating dynamic, fluid encounters.
+                </p>
             </div>
 
             <!-- Section 6: Key Learnings -->
             <div class="project-section">
                 <h3>Key Learnings</h3>
-                <ul class="project-list">
-                    <li><strong>GAS Mastery:</strong> Deep understanding of how to leverage the Gameplay Ability System</li>
-                    <li><strong>Feedback Design:</strong> Multi-layered feedback (visual, audio, haptic) in creating game feel</li>
-                    <li><strong>Team Collaboration:</strong> Working within a team structure to integrate systems</li>
-                    <li><strong>Level Design:</strong> Teaching mechanics through environmental design</li>
-                    <li><strong>Iterative Polish:</strong> Continuous playtesting and refinement</li>
-                </ul>
+                <p>
+                    <strong>GAS Mastery:</strong> Deep understanding of how to leverage the Gameplay Ability System for complex ability 
+                    interactions. We learned to structure abilities for optimal performance and maintainability, essential lessons for 
+                    scalable game architecture.
+                </p>
+                <p>
+                    <strong>Feedback Design:</strong> The critical importance of multi-layered feedback (visual, audio, haptic) in creating 
+                    satisfying game feel. Each mechanic requires at least three feedback channels to feel complete and responsive.
+                </p>
+                <p>
+                    <strong>Team Collaboration:</strong> Working within a team structure of 10+ people taught us the importance of clear 
+                    communication, modular design, and maintaining consistent vision across different specialties and departments.
+                </p>
+                <p>
+                    <strong>Level Design Principles:</strong> How to teach complex mechanics through environmental design, player affordances, 
+                    and sight lines rather than relying on explicit tutorials. Good level design is invisible—it guides without instructing.
+                </p>
+                <p>
+                    <strong>Iterative Polish:</strong> The importance of continuous playtesting and refinement in achieving professional-level 
+                    game feel. Small tweaks to animation timing, camera response, and feedback systems compound into dramatically improved 
+                    player experience.
+                </p>
             </div>
 
         </section>
