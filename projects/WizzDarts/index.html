@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WizzDarts</title>
+    <title>WizzDarts - Maximilian Becker</title>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
@@ -31,146 +31,141 @@
         <!-- Project Header -->
         <section class="project-header">
             <h1 class="project-title">WizzDarts</h1>
-            <p class="project-meta">Learning & Academic Project • Unity 6 • 2024-2026</p>
-            <p class="project-intro">
-                A first-person parkour experience built in Unreal Engine 5 using the Gameplay Ability System. 
-                This project explores dynamic movement mechanics, player feedback systems, and camera design"
-            </p>
         </section>
 
         <!-- Project Content -->
         <section class="project-content">
-            <!-- Section 1: Overview -->
+            
+            <!-- Section 1: Gameplay Video (YouTube Embed) -->
             <div class="project-section">
-                <h3>Project Overview</h3>
+                <div class="youtube-container">
+                    <iframe 
+                        width="100%" 
+                        height="600" 
+                        src="https://youtu.be/KTsZ9rgYMUM" 
+                        title="WizzDarts Gameplay" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Section 2: Design Overview -->
+            <div class="project-section">
+                <h3>Design Overview</h3>
+                
+                <h4>Breakdown</h4>
                 <p>
-                    This project represents my deep dive into game development with Unreal Engine 5. Built on a 
-                    foundation of the Gameplay Ability System (GAS), the game focuses on creating an engaging 
-                    first-person parkour experience with smooth, responsive controls and satisfying player feedback.
+                    WizzDarts is a chaotic 2 player local versus Darts game with roguelike aspects.
+                    The Players can use their wizard skills to sabotage their friends with magical items and special darts in the most chaotical game of Darts ever!
                 </p>
                 <p>
-                    Working in a small team environment, I've been responsible for systems design, mechanics 
-                    implementation, and playtesting feedback loops. The project is also directly integrated with 
-                    my Bachelor's thesis research on teaching game mechanics through intelligent level design 
-                    rather than explicit tutorials.
+                    The core loop revolves around both players taking turns throwing their darts at the board with the help of the nintendo switch joycons as their darts using motiong controls.
+                    After each round both player choose character upgrades and modifiers aswell as special darts to enhance their next round. The goal is to be quick: Since both player choose
+                    from the same item pool, they can "steal" the strongest upgrade from the other player or pick specific items that work well with their build. After a custom amount of rount the 
+                    player with the higher score wins!
                 </p>
             </div>
 
-            <!-- Section 2: Technical Foundation -->
-            <div class="project-section">
-                <h3>Technical Foundation</h3>
-                <p>
-                    <strong>Gameplay Ability System (GAS):</strong> The core of the game is built on GAS, which 
-                    provides a robust framework for managing abilities, effects, and gameplay interactions. 
-                    This allows for flexible, data-driven ability design that scales well as the project grows.
-                </p>
-                <p>
-                    <strong>Camera System:</strong> Working with my team's custom camera mode stack, I've developed 
-                    a sophisticated camera system that dynamically responds to player actions and state. The camera 
-                    is not just a view port but an active feedback mechanism that communicates game state and possibilities 
-                    to the player.
-                </p>
-                <p>
-                    <strong>Movement Mechanics:</strong> The parkour movement system includes running, jumping, 
-                    wall running, climbing, and vaulting. Each ability is carefully tuned to feel responsive and 
-                    rewarding while maintaining clear visual and audio feedback.
-                </p>
-            </div>
-
-            <!-- Section 3: Key Features -->
-            <div class="project-section">
-                <h3>Key Features & Systems</h3>
-                <p>
-                    <strong>Fluid Movement:</strong> Smooth transitions between different movement states with 
-                    careful attention to input responsiveness and animation blending.
-                </p>
-                <p>
-                    <strong>Advanced Camera Modes:</strong> Multiple camera configurations that adapt to different 
-                    movement states, providing optimal player visibility and feedback.
-                </p>
-                <p>
-                    <strong>Comprehensive Feedback Systems:</strong> Visual, audio, and haptic feedback that reinces 
-                    successful actions and communicates failures to the player.
-                </p>
-                <p>
-                    <strong>Invisible Tutorials:</strong> Level design that teaches mechanics through exploration 
-                    and natural progression rather than explicit instruction screens.
-                </p>
-            </div>
-
-            <!-- Section 4: Design Philosophy -->
-            <div class="project-section">
-                <h3>Design Philosophy</h3>
-                <p>
-                    The core philosophy behind this project is that great game feel comes from the intersection of 
-                    responsive controls, clear feedback systems, and thoughtful level design. Every mechanic serves 
-                    a purpose, and every player action receives immediate, meaningful feedback.
-                </p>
-                <p>
-                    Rather than relying on tutorial screens or pop-ups, the level design guides players naturally 
-                    through the available mechanics. This "invisible tutorial" approach creates a more immersive 
-                    and engaging experience while demonstrating advanced level design principles.
-                </p>
-            </div>
-
-            <!-- Section 5: Challenges & Solutions -->
-            <div class="project-section">
-                <h3>Challenges & Solutions</h3>
-                <p>
-                    <strong>Challenge:</strong> Maintaining responsive controls while using the GAS framework, 
-                    which adds complexity to the input pipeline.
-                </p>
-                <p>
-                    <strong>Solution:</strong> Careful optimization of GAS ability activation and a custom input 
-                    buffer system that anticipates player input, creating the feeling of tight, responsive controls.
-                </p>
-                <p>
-                    <strong>Challenge:</strong> Creating a camera system that provides good visibility for parkour 
-                    action while remaining predictable and controlable.
-                </p>
-                <p>
-                    <strong>Solution:</strong> Multiple camera modes that activate based on movement state, allowing 
-                    the camera to be context-aware while remaining player-controllable.
-                </p>
-            </div>
-
-            <!-- Section 6: Technical Details -->
+            <!-- Section 3: Technical Details -->
             <div class="project-section">
                 <h3>Technical Details</h3>
                 <p>
-                    <strong>Engine:</strong> Unreal Engine 5.5 - 5.7<br>
-                    <strong>Primary Language:</strong> Blueprint (with C++ for core systems)<br>
-                    <strong>Key Systems:</strong> Gameplay Ability System, Enhanced Input System, Camera Mode Stack<br>
-                    <strong>Team Size:</strong> Small team with specialized roles<br>
-                    <strong>Status:</strong> Active development<br>
-                    <strong>Timeline:</strong> Ongoing as part of academic curriculum and professional development
+                    <strong>Engine:</strong> Unity 6<br>
+                    <strong>Primary Language:</strong> C# (with third party code)<br>
+                    <strong>Key Systems:</strong> Motion tracking<br>
+                    <strong>Team Size:</strong> Core team of 4, 3 Sound engineers, 1 Director<br>
+                    <strong>Type:</strong> 5th Semester Animation and Game Project<br>
+                    <strong>Production Period:</strong> 4 months
                 </p>
             </div>
 
-            <!-- Section 7: Learnings -->
+            <!-- Section 4: Game Design -->
+            <div class="project-section">
+                <h3>Game Design</h3>
+
+                <img src="assets/WizzDartsGameDesign.png" alt="CoreGameloop" class="project-image">
+                
+                <p>
+                    The design philosophy behind Massacrade centers on creating a seamless experience where movement and combat 
+                    feel like extensions of each other. Rather than separating traversal from encounters, we integrated them into 
+                    a unified system where the player's parkour skills directly influence their combat capabilities and escape options.
+                </p>
+                <p>
+                    <strong>Player Feedback:</strong> Every action receives immediate visual, audio, and haptic feedback. Successful 
+                    parkour movements trigger satisfying animations and sound design, while combat strikes produce impactful visuals 
+                    and screen shake. Failed movements result in clear, predictable consequences that teach the player without frustration.
+                </p>
+                <p>
+                    <strong>Level Design:</strong> Our levels are designed with verticality and flow in mind. Multiple pathways encourage 
+                    player experimentation, and environmental design naturally teaches mechanics through exploration. Sight lines guide 
+                    players toward objectives while allowing skilled players to discover shortcuts and alternative routes.
+                </p>
+                <p>
+                    <strong>Game Feel:</strong> Polish was a critical focus throughout development. Animations blend smoothly, the camera 
+                    remains responsive to player input, and the overall feel communicates player agency at all times. We prioritized 
+                    making the game feel responsive rather than weighty, encouraging aggressive, flowing play.
+                </p>
+            </div>
+
+            <!-- Section 5: Technical Design -->
+            <div class="project-section">
+                <h3>Technical Design</h3>
+                <p>
+                    The technical foundation of Massacrade is built on the Gameplay Ability System, which provides a scalable framework 
+                    for managing abilities, effects, and gameplay interactions. This approach allowed us to rapidly prototype and iterate 
+                    on mechanics while maintaining clean, data-driven design.
+                </p>
+                <p>
+                    <strong>Gameplay Ability System (GAS):</strong> All character abilities—from basic movement to combat attacks—are implemented 
+                    as GAS abilities. This unified system enables easy replication for networked play, consistent cooldown management, and 
+                    modular ability design that scales with the project complexity.
+                </p>
+                <p>
+                    <strong>Camera System:</strong> We developed a sophisticated camera mode stack that dynamically switches between multiple 
+                    camera configurations based on character state. The camera responds to movement intensity, combat encounters, and player 
+                    input, always prioritizing visibility and communicating game state through positioning and animation.
+                </p>
+                <p>
+                    <strong>Movement Mechanics:</strong> The parkour system includes running, jumping, wall running, climbing, vaulting, and 
+                    sliding. Each ability is carefully tuned for responsiveness, with input buffering to anticipate player actions and create 
+                    the feeling of tight, precise controls even in complex movement chains.
+                </p>
+                <p>
+                    <strong>Combat Integration:</strong> Combat abilities are seamlessly integrated with movement through a state machine that 
+                    determines valid attack windows, recovery times, and momentum preservation. Players can chain attacks into movement or vice 
+                    versa, creating dynamic, fluid encounters.
+                </p>
+            </div>
+
+            <!-- Section 6: Key Learnings -->
             <div class="project-section">
                 <h3>Key Learnings</h3>
                 <p>
-                    <strong>GAS Mastery:</strong> Deep understanding of how to leverage the Gameplay Ability System 
-                    for complex, multiplayer-ready ability design.
+                    <strong>GAS Mastery:</strong> Deep understanding of how to leverage the Gameplay Ability System for complex ability 
+                    interactions. We learned to structure abilities for optimal performance and maintainability, essential lessons for 
+                    scalable game architecture.
                 </p>
                 <p>
-                    <strong>Feedback Design:</strong> The critical importance of multi-layered feedback (visual, 
-                    audio, haptic) in creating game feel.
+                    <strong>Feedback Design:</strong> The critical importance of multi-layered feedback (visual, audio, haptic) in creating 
+                    satisfying game feel. Each mechanic requires at least three feedback channels to feel complete and responsive.
                 </p>
                 <p>
-                    <strong>Team Collaboration:</strong> Working within a team structure to integrate different 
-                    systems and maintain consistent vision.
+                    <strong>Team Collaboration:</strong> Working within a team structure of 10+ people taught us the importance of clear 
+                    communication, modular design, and maintaining consistent vision across different specialties and departments.
                 </p>
                 <p>
-                    <strong>Level Design Principles:</strong> How to teach complex mechanics through environmental 
-                    design and player affordances.
+                    <strong>Level Design Principles:</strong> How to teach complex mechanics through environmental design, player affordances, 
+                    and sight lines rather than relying on explicit tutorials. Good level design is invisible—it guides without instructing.
                 </p>
                 <p>
-                    <strong>Iterative Polish:</strong> The importance of continuous playtesting and refinement in 
-                    achieving professional-level game feel.
+                    <strong>Iterative Polish:</strong> The importance of continuous playtesting and refinement in achieving professional-level 
+                    game feel. Small tweaks to animation timing, camera response, and feedback systems compound into dramatically improved 
+                    player experience.
                 </p>
             </div>
+
         </section>
     </main>
 
