@@ -16,7 +16,7 @@ const portfolioProjects = [
         title: 'WizzDarts',
         description: 'Use your wizard skills to sabotage your opponent in Wizzdarts, the most chaotic game of Darts youll ever play!',
         image: 'images/WizzDarts.png',
-        tags: ['Unity', 'Nintendo Switch', 'Motion Controls', 'CouchCoop'],
+        tags: ['Unity', 'Nintendo Switch', 'Motion Controls', 'CouchCoop', 'C#'],
         projectPage: 'projects/WizzDarts/index.html'
     }
 ];
