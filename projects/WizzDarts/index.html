@@ -72,6 +72,7 @@
             <div class="project-section">
                 <h3>Technical Details</h3>
                 <p>
+                    <strong>Contribution:</strong> Programmer, Game Designer and Vfx artist of the team<br>
                     <strong>Engine:</strong> Unity 6<br>
                     <strong>Primary Language:</strong> C# (with third party code)<br>
                     <strong>Key Systems:</strong> Motion tracking<br>
@@ -126,20 +127,36 @@
                     problem in a nice way.
                     this issue. 
                 </p>
+                 <p>
+                    <strong>Gamifying Darts:</strong> As a passionate Dart player myself, i aksed myself the question how could i make the ganme of darts more fun and interactive. The first design decision that came to my
+                     was to make the game less repetitive by enabling the whole dartboard as a valuable playfield. In a real match of darts, players try to score as high as possible in the scoring phase. Thats why most players only try to hit the fields of 19 and 20.
+                     Most of the other fields only get used when the players tries to finish their leg of darts. I wanted to change that by making diffrent fields more attractive to score in diffrent rounds. This was done by
+                     changing the board after each round (spawning a blackhole on top of the 20 field, or a bonus multiplier field on weaker numbers) and incentivize the player through special darts and items (for example 
+                     a the fire dart, that can leave a fire field behind and block of a certain zone of the board for the enemy, or the odd number item, that rewards hitting uneven numbers).
+                    
+                </p>
+                
                 <p>
-                    <strong>Items:</strong> Our levels are designed with verticality and flow in mind. Multiple pathways encourage 
-                    player experimentation, and environmental design naturally teaches mechanics through exploration. Sight lines guide 
-                    players toward objectives while allowing skilled players to discover shortcuts and alternative routes.
+                    <strong>Items:</strong> Items can be bought of the gnome vendor inbetween rounds to change and enhance a certain playstyle of the players while also enabling the players to combine them with one another
+                    or special darts. Due to scope of the game i was only to add three items into the game:
+                    1. The Rethrow: A item that lets the player rethrow their last dart. Should be used to help beginners rethrow a messed up throw and to sustain combos.
+                    2. Dart sacrifice: This item sacrifices a dart throw but gives the a big multiplier on the next throw: Follows basic risk-reward princible, often used by experience players.
+                    3. Multiplier for odd numbers: Gives the player a medium multiplier on odd numbers, used to reward exact aiming.
+                    
                 </p>
                 <p>
-                    <strong>Board Modifiers:</strong> Polish was a critical focus throughout development. Animations blend smoothly, the camera 
-                    remains responsive to player input, and the overall feel communicates player agency at all times. We prioritized 
-                    making the game feel responsive rather than weighty, encouraging aggressive, flowing play.
+                    <strong>Board Modifiers:</strong> Used to spice up the Gameplay and make rounds diffrent from one another and forces the player to adapt and throw into diffrent zones:
+                    1. Black Whole: A black hole spawns that moves around and sucks up any dart that flies closeby, negating the throw.
+                    2. Minus Area: A red minus area spawns, that subtracts the score when being hit by a dart.
+                    3. Moving Dartboard: Lets the Dartboard moves from left to right, challenges the timing of the throw.
+                    4.Rotaiton: Lets the Dartboard rotate, challenges the timing of the players throw aswell.
                 </p>
                 <p>
-                    <strong>Special Darts:</strong> Polish was a critical focus throughout development. Animations blend smoothly, the camera 
-                    remains responsive to player input, and the overall feel communicates player agency at all times. We prioritized 
-                    making the game feel responsive rather than weighty, encouraging aggressive, flowing play.
+                    <strong>Special Darts:</strong>
+                    Special darts should enhance a throw by interacting with the board, other player or rewarding a certain playstyle.
+                    1. Fire Dart: On hit burns a area around the hitpoint and destroys enemy darts when entering this area, also has a medium multiplier. Should be used to sabotage the other player.
+                    2.Drunk Dart: Gives the Player drunk vision but a big mutiplier. High risk and high reward.
+                    3. Electric dart: Schocks other players darts and pull them in,also has a medium multiplier. Used to create interaction between players.
                 </p>
             </div>
 
@@ -147,29 +164,20 @@
             <div class="project-section">
                 <h3>Technical Design</h3>
                 <p>
-                    The technical foundation of Massacrade is built on the Gameplay Ability System, which provides a scalable framework 
-                    for managing abilities, effects, and gameplay interactions. This approach allowed us to rapidly prototype and iterate 
-                    on mechanics while maintaining clean, data-driven design.
+                    The technical foundation of Massacrade is built with Unity version 6000.0.60f1 and the Nintendo switch integration.
+                    Because of NDA Regulations i cannot go into technical details or name technical specifics.
                 </p>
                 <p>
-                    <strong>Gameplay Ability System (GAS):</strong> All character abilities—from basic movement to combat attacks—are implemented 
-                    as GAS abilities. This unified system enables easy replication for networked play, consistent cooldown management, and 
-                    modular ability design that scales with the project complexity.
+                    <strong>Motion Controls:</strong>Created by combinign Quaternion and Euler calculations with diffrent sensors of the nintendo switch joycons.
+                    Also uses the New Input System of the Unity game engine. 
                 </p>
                 <p>
-                    <strong>Camera System:</strong> We developed a sophisticated camera mode stack that dynamically switches between multiple 
-                    camera configurations based on character state. The camera responds to movement intensity, combat encounters, and player 
-                    input, always prioritizing visibility and communicating game state through positioning and animation.
+                    <strong>Item System:</strong> A highly customizable Item System using Game objects to be able to generate diffrent kind of items and special darts easily, that can modify
+                    diffrent modifers like score, other gameobjects like player darts and trigger specific events (for example drunk vision screen shader).
                 </p>
                 <p>
-                    <strong>Movement Mechanics:</strong> The parkour system includes running, jumping, wall running, climbing, vaulting, and 
-                    sliding. Each ability is carefully tuned for responsiveness, with input buffering to anticipate player actions and create 
-                    the feeling of tight, precise controls even in complex movement chains.
-                </p>
-                <p>
-                    <strong>Combat Integration:</strong> Combat abilities are seamlessly integrated with movement through a state machine that 
-                    determines valid attack windows, recovery times, and momentum preservation. Players can chain attacks into movement or vice 
-                    versa, creating dynamic, fluid encounters.
+                    <strong>Score System and Game Manager:</strong> Creation of a Strong Game Manager that keeps track of both player inventories, turn and interacts with the Scoring system 
+                    to ensure the core Gameplayloop for both players at the same time.
                 </p>
             </div>
 
@@ -177,26 +185,30 @@
             <div class="project-section">
                 <h3>Key Learnings</h3>
                 <p>
-                    <strong>GAS Mastery:</strong> Deep understanding of how to leverage the Gameplay Ability System for complex ability 
-                    interactions. We learned to structure abilities for optimal performance and maintainability, essential lessons for 
-                    scalable game architecture.
+                    <strong>Item variety:</strong> Although the game is fun for some rounds, ultimately the game would have needed more items, special darts and board modifiers to be highly replayable.
+                    After the view rounds, the player has seen every content of the game, rounds play simular and the current amount of items doesnt allow for a big variety of builds. 
+                    This was due to production problems and scope reasons. If me and my team had more productiom time, im sure these problems could be solved!
                 </p>
                 <p>
                     <strong>Feedback Design:</strong> The critical importance of multi-layered feedback (visual, audio, haptic) in creating 
                     satisfying game feel. Each mechanic requires at least three feedback channels to feel complete and responsive.
                 </p>
                 <p>
-                    <strong>Team Collaboration:</strong> Working within a team structure of 10+ people taught us the importance of clear 
-                    communication, modular design, and maintaining consistent vision across different specialties and departments.
+                    <strong>Devkit Playtesting:</strong>While Playtesting was done quite often, we started to test the game inside the editor on pc and tested the game to late on the actual devkit, which resulted in 
+                    production issues and unforseen bugs and behaviour. In the future i will test switch builds earlier in development using the devkit.
                 </p>
                 <p>
-                    <strong>Level Design Principles:</strong> How to teach complex mechanics through environmental design, player affordances, 
-                    and sight lines rather than relying on explicit tutorials. Good level design is invisible—it guides without instructing.
+                    <strong>Sound Integration:</strong>Sound Integration using Fmod on the Nintendo switch took some unforseen extra time due to bugs and development issues and should be included in the pipeline earlier together 
+                    with the sound engineers.
                 </p>
                 <p>
-                    <strong>Iterative Polish:</strong> The importance of continuous playtesting and refinement in achieving professional-level 
-                    game feel. Small tweaks to animation timing, camera response, and feedback systems compound into dramatically improved 
-                    player experience.
+                    <strong>Game Feel:</strong>Due to the named production reason, the game feel was not fully worked out and could be improved to make the game more satisfying to play. Missing vfx and sfx could have elevated the experience
+                    while also conveing information in a better way!.
+                </p>
+                <p>
+                    <strong>Conclusion:</strong>All in all the game was a success and a proof of concept. Players really enjoyed playing the game and with some more production time and a proper setup pipeline
+                    , a lot of issues that arrived could be fixed.
+                    
                 </p>
             </div>
 
