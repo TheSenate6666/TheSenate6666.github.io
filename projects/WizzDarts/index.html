@@ -88,22 +88,56 @@
                  <img src="images/2wizzdarts.png" alt="WizzDarts" class="project-image">
                 
                 <p>
-                    The design philosophy behind Massacrade centers on creating a seamless experience where movement and combat 
-                    feel like extensions of each other. Rather than separating traversal from encounters, we integrated them into 
-                    a unified system where the player's parkour skills directly influence their combat capabilities and escape options.
+                    The design philosophy behind Wizzdarts focuses on creating a chaotic local versus party gameexperience, where skills matters while still keeping the barrier of entry as low as possible 
+                    and minimazing skill gabs through randimazition of events. The goal is to provide a fun expirience for all players with high replay value: No game should be the same as the last!
                 </p>
                 <p>
-                    <strong>Player Feedback:</strong> Every action receives immediate visual, audio, and haptic feedback. Successful 
-                    parkour movements trigger satisfying animations and sound design, while combat strikes produce impactful visuals 
-                    and screen shake. Failed movements result in clear, predictable consequences that teach the player without frustration.
+                    <strong>Player Controller:</strong> My goal was to create a player controller that feels good to use while also mimicing the throw of dart player in real life.
+                    Since the success of this game would be tied to the fun factor of the throwing mechanic, i decided to spend a lot of production time on polishing this mechnaic.
+                    To make the player controller as polished as possible i tried to fit Steven Swink's  seven Principles of Game Feel described in his book "Game feel":
+                    1. Predictable Result: 
+                    When a player throws a dart, it should land exactly where the player would exspect the dart to land. To achieve this, i split up the input in two phases, more on this later.
+                    2. Instantaneous Response:
+                    The Player feels the response of their input immediatly. I achieved this by adding vibration and immediate audio and visual cues.
+                    3. Easy but deep:
+                    The Game takes minutes to learn but lifetime to master. I tried to make the game easy to learn and be able to consistently throw in the wanted direction, however it is hard to master, if the 
+                    player wants the dart to land exactly where the aim cursos is by throwing with the exact wanted force.
+                    4. Appealing Response:
+                    The Sensation of control is aesthetically appealing and compelling, separate from context. To implement this principle, i tried to create a kitbash and create diffrent visual effects, shaders and audio cues.
+                    5.Organic motion:
+                    Controlling the avatar creates appealing arcs of motion. To fullfill this principle, i decided to look at pro darts players to see their arc when throwing a dart. As a big fan of professional
+                    darts and a player myself, i know i wanted to reward the player for a clean throwing arc, while also giving a rewarding feedback when the player managed to throw a perfect throw. 
+                    To get this arc as satisfying as possible, i playtested this game a lot with new and returning players to dinf a good median.
+                    6.Harmony:
+                    Each Element of a games feel supports a single, cohesive perception of a unique physical reality of the player. This principle was achieved by incentivizing the player to change up their throw
+                    based on the items, darts or board modifiers active.
+                    7.Novelty: 
+                    Though the result of the input is predictable, there is enough subtlety. While goof players should be able to score consistenly preceise throws, there must be a added randomness inside the throwing mechanic
+                    and by changing up the board via modfiers so the game stays fun and challenging at all times.
+                    and playstyle to hit the exact aim spot the player must follow this 
+                    This feature took a lot of iteration, while originally starting the game as a pc balatro-like with the mouse as input method, i decided to switch to the nintendo switch as a platform.
+                    The technical possibilities of the joycons allowed for a better gamefeel thanks to motion controls. After a lot of iteration and trying out a lot of diffrent sensor methods, i decided
+                    on a two phase input method: First the player can choose a general desired direction of the dart by tilting and moving the joycon in diffrent directions. When the player decided on a location they
+                    could save the location by pressing the trigger button. After that the player enters the aiming phase. While holding the trigegr down the player could now throw the dart by mimicing the throw of a real dart
+                    and release the dart when letting go of the trigger. The throw would then be based around the previous selected location with the strength deciding the Y-Axis Location and the Rotation deciding the X-Axis
+                    Location based around the previous assigned target location. WHen performing a "perfect" throw the dart would land exactly on the target symbol. 
+                    Reason for this two phase method was to make the game accessible for players of all skill levels. During the firts playtest i noticed that without the aiming phase players struggeld a lot to guess a general 
+                    direction of the dart trajectory. This problem got worse when board modifiers were added, that punishes players for throwing in diffrent zones of the board. The Introduction of the aiming phase solved this 
+                    problem in a nice way.
+                    this issue. 
                 </p>
                 <p>
-                    <strong>Level Design:</strong> Our levels are designed with verticality and flow in mind. Multiple pathways encourage 
+                    <strong>Items:</strong> Our levels are designed with verticality and flow in mind. Multiple pathways encourage 
                     player experimentation, and environmental design naturally teaches mechanics through exploration. Sight lines guide 
                     players toward objectives while allowing skilled players to discover shortcuts and alternative routes.
                 </p>
                 <p>
-                    <strong>Game Feel:</strong> Polish was a critical focus throughout development. Animations blend smoothly, the camera 
+                    <strong>Board Modifiers:</strong> Polish was a critical focus throughout development. Animations blend smoothly, the camera 
+                    remains responsive to player input, and the overall feel communicates player agency at all times. We prioritized 
+                    making the game feel responsive rather than weighty, encouraging aggressive, flowing play.
+                </p>
+                <p>
+                    <strong>Special Darts:</strong> Polish was a critical focus throughout development. Animations blend smoothly, the camera 
                     remains responsive to player input, and the overall feel communicates player agency at all times. We prioritized 
                     making the game feel responsive rather than weighty, encouraging aggressive, flowing play.
                 </p>
