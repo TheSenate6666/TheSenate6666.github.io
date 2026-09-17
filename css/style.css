@@ -440,6 +440,24 @@ body {
     .resume-embed {
         height: 600px;
     }
+
+    .hero-video-overlay {
+        padding-bottom: 24px;
+    }
+
+    .hero-video-title {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .hero-video-button {
+        padding: 12px 40px;
+        font-size: 13px;
+    }
+
+    .project-image {
+        max-height: 400px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -478,6 +496,15 @@ body {
 
     .portfolio-card-description {
         font-size: 12px;
+    }
+
+    .hero-video-button {
+        padding: 10px 30px;
+        font-size: 11px;
+    }
+
+    .project-image {
+        max-height: 300px;
     }
 }
    
