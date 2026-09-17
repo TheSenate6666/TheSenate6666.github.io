@@ -350,12 +350,12 @@ body {
 }
 
 .project-image {
-    width: 100%;
-    max-height: 600px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 24px 0;
+    max-width: 60%;    /* Controls image width (lower % = smaller image) */
+    height: auto;      /* Keeps original proportions */
+    display: block;    /* Required for auto margins */
+    margin: 24px auto; /* Centers image horizontally with spacing top & bottom */
 }
+
 
 .project-video,
 .project-gif {
