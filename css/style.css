@@ -617,4 +617,20 @@ body {
     border-radius: 8px;
     margin: 24px 0;
 }
+   .itch-button {
+    display: inline-block;
+    background-color: #fa5c5c; /* itch.io brand color */
+    color: #ffffff;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 12px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.itch-button:hover {
+    background-color: #e04b4b;
+    transform: translateY(-2px);
+}
 }
