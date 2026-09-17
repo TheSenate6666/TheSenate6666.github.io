@@ -57,14 +57,13 @@
                 
                 <h4>Breakdown</h4>
                 <p>
-                    WizzDarts is a chaotic 2 player local versus Darts game with roguelike aspects.
-                    The Players can use their wizard skills to sabotage their friends with magical items and special darts in the most chaotical game of Darts ever!
+                    WizzDarts is a chaotic 2-player local versus darts game with roguelike aspects. Players use their wizard skills to sabotage their friends with magical items and special darts in the most chaotic game of darts ever!
                 </p>
                 <p>
-                    The core loop revolves around both players taking turns throwing their darts at the board with the help of the nintendo switch joycons as their darts using motiong controls.
-                    After each round both player choose character upgrades and modifiers aswell as special darts to enhance their next round. The goal is to be quick: Since both player choose
-                    from the same item pool, they can "steal" the strongest upgrade from the other player or pick specific items that work well with their build. After Each round, a modifier gets added to the dartboard to make the game more chaotic!
-                    After a custom amount of rounds the player with the higher score wins!
+                    The core loop revolves around both players taking turns throwing their darts at the board with the help of Nintendo Switch JoyCons as their darts using motion controls. After each round, both players choose character upgrades and modifiers, as well as special darts to enhance their next round.
+                </p>
+                <p>
+                    The goal is to be quick: Since both players choose from the same item pool, they can "steal" the strongest upgrade from the other player or pick specific items that work well with their build. After each round, a modifier gets added to the dartboard to make the game more chaotic! After a custom amount of rounds, the player with the higher score wins!
                 </p>
             </div>
 
@@ -72,9 +71,9 @@
             <div class="project-section">
                 <h3>Technical Details</h3>
                 <p>
-                    <strong>Contribution:</strong> Programmer, Game Designer and Vfx artist of the team<br>
+                    <strong>Contribution:</strong> Programmer, Game Designer and VFX Artist of the team<br>
                     <strong>Engine:</strong> Unity 6<br>
-                    <strong>Primary Language:</strong> C# (with third party code)<br>
+                    <strong>Primary Language:</strong> C# (with third-party code)<br>
                     <strong>Key Systems:</strong> Motion tracking<br>
                     <strong>Team Size:</strong> Core team of 4, 3 Sound engineers, 1 Director<br>
                     <strong>Type:</strong> 5th Semester Animation and Game Project<br>
@@ -86,98 +85,123 @@
             <div class="project-section">
                 <h3>Game Design</h3>
 
-                 <img src="images/2wizzdarts.png" alt="WizzDarts" class="project-image">
+                <img src="assets/2wizzdarts.png" alt="WizzDarts" class="project-image">
                 
                 <p>
-                    The design philosophy behind Wizzdarts focuses on creating a chaotic local versus party gameexperience, where skills matters while still keeping the barrier of entry as low as possible 
-                    and minimazing skill gabs through randimazition of events. The goal is to provide a fun expirience for all players with high replay value: No game should be the same as the last!
+                    The design philosophy behind WizzDarts focuses on creating a chaotic local versus party game experience where skills matter while keeping the barrier to entry as low as possible and minimizing skill gaps through randomization of events. The goal is to provide a fun experience for all players with high replay value: No game should be the same as the last!
+                </p>
+
+                <h4>Player Controller</h4>
+                <p>
+                    My goal was to create a player controller that feels good to use while mimicking the throw of a real dart player. Since the success of this game would be tied to the fun factor of the throwing mechanic, I decided to spend significant production time polishing this mechanic.
                 </p>
                 <p>
-                    <strong>Player Controller:</strong> My goal was to create a player controller that feels good to use while also mimicing the throw of dart player in real life.
-                    Since the success of this game would be tied to the fun factor of the throwing mechanic, i decided to spend a lot of production time on polishing this mechnaic.
-                    To make the player controller as polished as possible i tried to fit Steven Swink's  seven Principles of Game Feel described in his book "Game feel":
-                    1. Predictable Result: 
-                    When a player throws a dart, it should land exactly where the player would exspect the dart to land. To achieve this, i split up the input in two phases, more on this later.
-                    2. Instantaneous Response:
-                    The Player feels the response of their input immediatly. I achieved this by adding vibration and immediate audio and visual cues.
-                    3. Easy but deep:
-                    The Game takes minutes to learn but lifetime to master. I tried to make the game easy to learn and be able to consistently throw in the wanted direction, however it is hard to master, if the 
-                    player wants the dart to land exactly where the aim cursos is by throwing with the exact wanted force.
-                    4. Appealing Response:
-                    The Sensation of control is aesthetically appealing and compelling, separate from context. To implement this principle, i tried to create a kitbash and create diffrent visual effects, shaders and audio cues.
-                    5.Organic motion:
-                    Controlling the avatar creates appealing arcs of motion. To fullfill this principle, i decided to look at pro darts players to see their arc when throwing a dart. As a big fan of professional
-                    darts and a player myself, i know i wanted to reward the player for a clean throwing arc, while also giving a rewarding feedback when the player managed to throw a perfect throw. 
-                    To get this arc as satisfying as possible, i playtested this game a lot with new and returning players to dinf a good median.
-                    6.Harmony:
-                    Each Element of a games feel supports a single, cohesive perception of a unique physical reality of the player. This principle was achieved by incentivizing the player to change up their throw
-                    based on the items, darts or board modifiers active.
-                    7.Novelty: 
-                    Though the result of the input is predictable, there is enough subtlety. While goof players should be able to score consistenly preceise throws, there must be a added randomness inside the throwing mechanic
-                    and by changing up the board via modfiers so the game stays fun and challenging at all times.
-                    and playstyle to hit the exact aim spot the player must follow this 
-                    This feature took a lot of iteration, while originally starting the game as a pc balatro-like with the mouse as input method, i decided to switch to the nintendo switch as a platform.
-                    The technical possibilities of the joycons allowed for a better gamefeel thanks to motion controls. After a lot of iteration and trying out a lot of diffrent sensor methods, i decided
-                    on a two phase input method: First the player can choose a general desired direction of the dart by tilting and moving the joycon in diffrent directions. When the player decided on a location they
-                    could save the location by pressing the trigger button. After that the player enters the aiming phase. While holding the trigegr down the player could now throw the dart by mimicing the throw of a real dart
-                    and release the dart when letting go of the trigger. The throw would then be based around the previous selected location with the strength deciding the Y-Axis Location and the Rotation deciding the X-Axis
-                    Location based around the previous assigned target location. WHen performing a "perfect" throw the dart would land exactly on the target symbol. 
-                    Reason for this two phase method was to make the game accessible for players of all skill levels. During the firts playtest i noticed that without the aiming phase players struggeld a lot to guess a general 
-                    direction of the dart trajectory. This problem got worse when board modifiers were added, that punishes players for throwing in diffrent zones of the board. The Introduction of the aiming phase solved this 
-                    problem in a nice way.
-                    this issue. 
+                    To make the player controller as polished as possible, I tried to fit Steven Swink's seven Principles of Game Feel from his book "Game Feel":
                 </p>
-                 <p>
-                    <strong>Gamifying Darts:</strong> As a passionate Dart player myself, i aksed myself the question how could i make the ganme of darts more fun and interactive. The first design decision that came to my
-                     was to make the game less repetitive by enabling the whole dartboard as a valuable playfield. In a real match of darts, players try to score as high as possible in the scoring phase. Thats why most players only try to hit the fields of 19 and 20.
-                     Most of the other fields only get used when the players tries to finish their leg of darts. I wanted to change that by making diffrent fields more attractive to score in diffrent rounds. This was done by
-                     changing the board after each round (spawning a blackhole on top of the 20 field, or a bonus multiplier field on weaker numbers) and incentivize the player through special darts and items (for example 
-                     a the fire dart, that can leave a fire field behind and block of a certain zone of the board for the enemy, or the odd number item, that rewards hitting uneven numbers).
-                    
+                
+                <div style="margin: 24px 0; padding-left: 20px; border-left: 3px solid #000;">
+                    <p><strong>1. Predictable Result</strong><br>
+                    When a player throws a dart, it should land exactly where the player would expect. To achieve this, I split up the input into two phases.</p>
+
+                    <p><strong>2. Instantaneous Response</strong><br>
+                    The player feels the response of their input immediately. I achieved this by adding vibration and immediate audio and visual cues.</p>
+
+                    <p><strong>3. Easy but Deep</strong><br>
+                    The game takes minutes to learn but a lifetime to master. I tried to make the game easy to learn and enable players to consistently throw in the wanted direction, however it is hard to master if the player wants the dart to land exactly where the aim cursor is by throwing with the exact desired force.</p>
+
+                    <p><strong>4. Appealing Response</strong><br>
+                    The sensation of control is aesthetically appealing and compelling, separate from context. To implement this principle, I tried to create different visual effects, shaders, and audio cues.</p>
+
+                    <p><strong>5. Organic Motion</strong><br>
+                    Controlling the avatar creates appealing arcs of motion. To fulfill this principle, I looked at professional darts players to see their throwing arc. As a big fan of professional darts and a player myself, I wanted to reward the player for a clean throwing arc while also giving rewarding feedback when the player managed to throw a perfect throw. To make this arc as satisfying as possible, I playtested this game a lot with new and returning players to find a good median.</p>
+
+                    <p><strong>6. Harmony</strong><br>
+                    Each element of a game's feel supports a single, cohesive perception of a unique physical reality for the player. This principle was achieved by incentivizing the player to change up their throw based on the items, darts, or board modifiers active.</p>
+
+                    <p><strong>7. Novelty</strong><br>
+                    Though the result of the input is predictable, there is enough subtlety. While good players should be able to score consistently precise throws, there must be added randomness inside the throwing mechanic and by changing up the board via modifiers so the game stays fun and challenging at all times.</p>
+                </div>
+
+                <p>
+                    This feature took a lot of iteration. Originally starting the game as a PC Balatro-like with the mouse as input method, I decided to switch to the Nintendo Switch as a platform. The technical possibilities of the JoyCons allowed for better game feel thanks to motion controls. After a lot of iteration and trying out many different sensor methods, I decided on a two-phase input method:
                 </p>
                 
                 <p>
-                    <strong>Items:</strong> Items can be bought of the gnome vendor inbetween rounds to change and enhance a certain playstyle of the players while also enabling the players to combine them with one another
-                    or special darts. Due to scope of the game i was only to add three items into the game:
-                    1. The Rethrow: A item that lets the player rethrow their last dart. Should be used to help beginners rethrow a messed up throw and to sustain combos.
-                    2. Dart sacrifice: This item sacrifices a dart throw but gives the a big multiplier on the next throw: Follows basic risk-reward princible, often used by experience players.
-                    3. Multiplier for odd numbers: Gives the player a medium multiplier on odd numbers, used to reward exact aiming.
-                    
+                    <strong>Phase 1 - Direction Selection:</strong> The player can choose a general desired direction of the dart by tilting and moving the JoyCon in different directions. When the player decided on a location, they could save the location by pressing the trigger button.
+                </p>
+                
+                <p>
+                    <strong>Phase 2 - Aiming and Release:</strong> While holding the trigger down, the player enters the aiming phase. The player could now throw the dart by mimicking the throw of a real dart and release the dart when letting go of the trigger. The throw would then be based around the previously selected location with the strength deciding the Y-Axis location and the rotation deciding the X-Axis location based around the previous assigned target location. When performing a "perfect" throw, the dart would land exactly on the target symbol.
+                </p>
+
+                <p>
+                    The reason for this two-phase method was to make the game accessible for players of all skill levels. During the first playtest, I noticed that without the aiming phase, players struggled a lot to guess a general direction of the dart trajectory. This problem got worse when board modifiers were added, as they punish players for throwing in different zones of the board. The introduction of the aiming phase solved this problem nicely.
+                </p>
+
+                <h4>Gamifying Darts</h4>
+                <p>
+                    As a passionate darts player myself, I asked myself how I could make the game of darts more fun and interactive. The first design decision that came to mind was to make the game less repetitive by enabling the whole dartboard as a valuable playfield. In a real match of darts, players try to score as high as possible in the scoring phase, so most players only try to hit the fields of 19 and 20. Most of the other fields only get used when the players try to finish their leg of darts.
                 </p>
                 <p>
-                    <strong>Board Modifiers:</strong> Used to spice up the Gameplay and make rounds diffrent from one another and forces the player to adapt and throw into diffrent zones:
-                    1. Black Whole: A black hole spawns that moves around and sucks up any dart that flies closeby, negating the throw.
-                    2. Minus Area: A red minus area spawns, that subtracts the score when being hit by a dart.
-                    3. Moving Dartboard: Lets the Dartboard moves from left to right, challenges the timing of the throw.
-                    4.Rotaiton: Lets the Dartboard rotate, challenges the timing of the players throw aswell.
+                    I wanted to change that by making different fields more attractive to score in different rounds. This was done by changing the board after each round (spawning a black hole on top of the 20 field, or a bonus multiplier field on weaker numbers) and incentivizing the player through special darts and items (for example, the fire dart that can leave a fire field behind and block a certain zone of the board for the enemy, or the odd number item that rewards hitting uneven numbers).
                 </p>
+
+                <h4>Items</h4>
                 <p>
-                    <strong>Special Darts:</strong>
-                    Special darts should enhance a throw by interacting with the board, other player or rewarding a certain playstyle.
-                    1. Fire Dart: On hit burns a area around the hitpoint and destroys enemy darts when entering this area, also has a medium multiplier. Should be used to sabotage the other player.
-                    2.Drunk Dart: Gives the Player drunk vision but a big mutiplier. High risk and high reward.
-                    3. Electric dart: Schocks other players darts and pull them in,also has a medium multiplier. Used to create interaction between players.
+                    Items can be bought from the gnome vendor in between rounds to change and enhance a certain playstyle of the players while also enabling them to combine them with one another or special darts. Due to scope constraints, I was only able to add three items into the game:
                 </p>
+                
+                <div style="margin: 24px 0; padding-left: 20px; border-left: 3px solid #000;">
+                    <p><strong>1. The Rethrow:</strong> An item that lets the player rethrow their last dart. Should be used to help beginners rethrow a messed-up throw and to sustain combos.</p>
+
+                    <p><strong>2. Dart Sacrifice:</strong> This item sacrifices a dart throw but gives the player a big multiplier on the next throw. Follows basic risk-reward principle, often used by experienced players.</p>
+
+                    <p><strong>3. Multiplier for Odd Numbers:</strong> Gives the player a medium multiplier on odd numbers, used to reward exact aiming.</p>
+                </div>
+
+                <h4>Board Modifiers</h4>
+                <p>
+                    Used to spice up the gameplay and make rounds different from one another, forcing the player to adapt and throw into different zones:
+                </p>
+                
+                <div style="margin: 24px 0; padding-left: 20px; border-left: 3px solid #000;">
+                    <p><strong>1. Black Hole:</strong> A black hole spawns that moves around and sucks up any dart that flies close by, negating the throw.</p>
+
+                    <p><strong>2. Minus Area:</strong> A red minus area spawns that subtracts the score when being hit by a dart.</p>
+
+                    <p><strong>3. Moving Dartboard:</strong> Lets the dartboard move from left to right, challenges the timing of the throw.</p>
+
+                    <p><strong>4. Rotation:</strong> Lets the dartboard rotate, challenges the timing of the player's throw as well.</p>
+                </div>
+
+                <h4>Special Darts</h4>
+                <p>
+                    Special darts should enhance a throw by interacting with the board, other players, or rewarding a certain playstyle:
+                </p>
+                
+                <div style="margin: 24px 0; padding-left: 20px; border-left: 3px solid #000;">
+                    <p><strong>1. Fire Dart:</strong> On hit, burns an area around the hit point and destroys enemy darts when entering this area, also has a medium multiplier. Should be used to sabotage the other player.</p>
+
+                    <p><strong>2. Drunk Dart:</strong> Gives the player drunk vision but a big multiplier. High risk and high reward.</p>
+
+                    <p><strong>3. Electric Dart:</strong> Shocks other players' darts and pulls them in, also has a medium multiplier. Used to create interaction between players.</p>
+                </div>
             </div>
 
             <!-- Section 5: Technical Design -->
             <div class="project-section">
                 <h3>Technical Design</h3>
                 <p>
-                    The technical foundation of Massacrade is built with Unity version 6000.0.60f1 and the Nintendo switch integration.
-                    Because of NDA Regulations i cannot go into technical details or name technical specifics.
+                    The technical foundation of WizzDarts is built with Unity version 6000.0.60f1 and Nintendo Switch integration. Because of NDA regulations, I cannot go into technical details or name specific technical implementations.
                 </p>
                 <p>
-                    <strong>Motion Controls:</strong>Created by combinign Quaternion and Euler calculations with diffrent sensors of the nintendo switch joycons.
-                    Also uses the New Input System of the Unity game engine. 
+                    <strong>Motion Controls:</strong> Created by combining Quaternion and Euler calculations with different sensors of the Nintendo Switch JoyCons. Also uses the New Input System of the Unity game engine.
                 </p>
                 <p>
-                    <strong>Item System:</strong> A highly customizable Item System using Game objects to be able to generate diffrent kind of items and special darts easily, that can modify
-                    diffrent modifers like score, other gameobjects like player darts and trigger specific events (for example drunk vision screen shader).
+                    <strong>Item System:</strong> A highly customizable item system using GameObjects to be able to generate different kinds of items and special darts easily, which can modify different modifiers like score, other GameObjects like player darts, and trigger specific events (for example, drunk vision screen shader).
                 </p>
                 <p>
-                    <strong>Score System and Game Manager:</strong> Creation of a Strong Game Manager that keeps track of both player inventories, turn and interacts with the Scoring system 
-                    to ensure the core Gameplayloop for both players at the same time.
+                    <strong>Score System and Game Manager:</strong> Creation of a strong Game Manager that keeps track of both player inventories, turn order, and interacts with the scoring system to ensure the core gameplay loop for both players at the same time.
                 </p>
             </div>
 
@@ -185,30 +209,22 @@
             <div class="project-section">
                 <h3>Key Learnings</h3>
                 <p>
-                    <strong>Item variety:</strong> Although the game is fun for some rounds, ultimately the game would have needed more items, special darts and board modifiers to be highly replayable.
-                    After the view rounds, the player has seen every content of the game, rounds play simular and the current amount of items doesnt allow for a big variety of builds. 
-                    This was due to production problems and scope reasons. If me and my team had more productiom time, im sure these problems could be solved!
+                    <strong>Item Variety:</strong> Although the game is fun for some rounds, ultimately the game would have needed more items, special darts, and board modifiers to be highly replayable. After a few rounds, the player has seen every content of the game, rounds play similar, and the current amount of items doesn't allow for a big variety of builds. This was due to production constraints and scope reasons. If my team and I had more production time, I'm sure these problems could be solved!
                 </p>
                 <p>
-                    <strong>Feedback Design:</strong> The critical importance of multi-layered feedback (visual, audio, haptic) in creating 
-                    satisfying game feel. Each mechanic requires at least three feedback channels to feel complete and responsive.
+                    <strong>Feedback Design:</strong> The critical importance of multi-layered feedback (visual, audio, haptic) in creating satisfying game feel. Each mechanic requires at least three feedback channels to feel complete and responsive.
                 </p>
                 <p>
-                    <strong>Devkit Playtesting:</strong>While Playtesting was done quite often, we started to test the game inside the editor on pc and tested the game to late on the actual devkit, which resulted in 
-                    production issues and unforseen bugs and behaviour. In the future i will test switch builds earlier in development using the devkit.
+                    <strong>DevKit Playtesting:</strong> While playtesting was done quite often, we started testing the game inside the editor on PC and tested the game too late on the actual DevKit, which resulted in production issues and unforeseen bugs and behavior. In the future, I will test Switch builds earlier in development using the DevKit.
                 </p>
                 <p>
-                    <strong>Sound Integration:</strong>Sound Integration using Fmod on the Nintendo switch took some unforseen extra time due to bugs and development issues and should be included in the pipeline earlier together 
-                    with the sound engineers.
+                    <strong>Sound Integration:</strong> Sound integration using FMOD on the Nintendo Switch took some unforeseen extra time due to bugs and development issues and should be included in the pipeline earlier together with the sound engineers.
                 </p>
                 <p>
-                    <strong>Game Feel:</strong>Due to the named production reason, the game feel was not fully worked out and could be improved to make the game more satisfying to play. Missing vfx and sfx could have elevated the experience
-                    while also conveing information in a better way!.
+                    <strong>Game Feel:</strong> Due to the mentioned production constraints, the game feel was not fully worked out and could be improved to make the game more satisfying to play. Missing VFX and SFX could have elevated the experience while also conveying information in a better way.
                 </p>
                 <p>
-                    <strong>Conclusion:</strong>All in all the game was a success and a proof of concept. Players really enjoyed playing the game and with some more production time and a proper setup pipeline
-                    , a lot of issues that arrived could be fixed.
-                    
+                    <strong>Conclusion:</strong> All in all, the game was a success and a proof of concept. Players really enjoyed playing the game and with some more production time and a proper development pipeline, many of the issues that arose could be fixed.
                 </p>
             </div>
 
