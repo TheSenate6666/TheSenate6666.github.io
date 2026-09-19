@@ -594,20 +594,22 @@ body {
    GLOBAL BUTTON & MEDIA STYLES (Applies everywhere)
    ============================================ */
 
-.itch-button {
+itch-button {
     display: inline-block;
-    background-color: #fa5c5c;
-    color: #ffffff;
+    background-color: #ffffff;  /* White background */
+    color: #000000;              /* Black text */
+    border: 1.5px solid #000000; /* Subtle outline for crisp visibility */
     padding: 10px 20px;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
     border-radius: 6px;
     margin-top: 12px;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    transition: all 0.2s ease;
 }
 
 .itch-button:hover {
-    background-color: #e04b4b;
+    background-color: #000000;  /* Inverts to black on hover */
+    color: #ffffff;              /* Text turns white on hover */
     transform: translateY(-2px);
 }
 
@@ -619,6 +621,26 @@ body {
     margin: 24px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     display: block;
+}
+
+/* Container that crops out the outer edges */
+.gif-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 24px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Zooms in and shifts image left to eliminate the black bar & discord line */
+.gif-wrapper .project-gif {
+    width: 127.5%;          /* Scales content to fill width */
+    margin-left: -25.5%;    /* Offsets the 20% black bar on the left */
+    margin-top: 0;
+    margin-bottom: 0;
+    display: block;
+    border-radius: 0;      /* Handled by wrapper */
+    box-shadow: none;      /* Handled by wrapper */
 }
 
 /* ============================================
@@ -634,4 +656,6 @@ body {
         font-size: 20px;
         margin-bottom: 12px;
     }
+
+   
 }
