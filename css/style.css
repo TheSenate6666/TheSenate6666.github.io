@@ -632,7 +632,8 @@ body {
 
 .gif-wrapper .project-gif {
     width: 128%;          /* Increases right-side crop */
-    margin-left: -12%;    /* Reduces left-side crop */
+    margin-left: -12%;
+    margin-right: -20%/* Reduces left-side crop */
     margin-top: 0;
     margin-bottom: 0;
     display: block;
