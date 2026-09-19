@@ -630,15 +630,14 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Zooms in and shifts image left to eliminate the black bar & discord line */
 .gif-wrapper .project-gif {
-    width: 127.5%;          /* Scales content to fill width */
-    margin-left: -25.5%;    /* Offsets the 20% black bar on the left */
+    width: 128%;          /* Increases right-side crop */
+    margin-left: -12%;    /* Reduces left-side crop */
     margin-top: 0;
     margin-bottom: 0;
     display: block;
-    border-radius: 0;      /* Handled by wrapper */
-    box-shadow: none;      /* Handled by wrapper */
+    border-radius: 0;
+    box-shadow: none;
 }
 
 /* ============================================
