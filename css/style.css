@@ -631,7 +631,7 @@ body {
 }
 
 .gif-wrapper .project-gif {
-    width: 103%;        /* Pushes the right edge past the container to crop it */
+    width: 108%;        /* Pushes the right edge past the container to crop it */
     margin-left: 0;     /* Locks the left side flush to keep your preferred margin */
     margin-top: 0;
     margin-bottom: 0;
