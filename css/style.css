@@ -526,7 +526,7 @@ body {
 .hero-video-container {
     position: relative;
     width: 100%;
-    height: 80vh; /* Adjust height percentage of screen as preferred */
+    height: 80vh;
     background: #000;
     overflow: hidden;
 }
@@ -550,10 +550,10 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
     display: flex;
-    flex-direction: column; /* Stack title on top of button */
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-end; /* Push content to the bottom */
-    padding-bottom: 48px; /* Gap between button and video bottom */
+    justify-content: flex-end;
+    padding-bottom: 48px;
     z-index: 10;
     text-align: center;
 }
@@ -565,7 +565,7 @@ body {
     margin-bottom: 16px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7); /* Subtle glow to ensure legibility on light video backgrounds */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .hero-video-button {
@@ -590,36 +590,13 @@ body {
     transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-    .hero-video-overlay {
-        padding-bottom: 24px;
-    }
+/* ============================================
+   GLOBAL BUTTON & MEDIA STYLES (Applies everywhere)
+   ============================================ */
 
-    .hero-video-title {
-        font-size: 20px;
-        margin-bottom: 12px;
-    }
-
-
-   .project-image {
-    width: 100%;
-    max-height: 600px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 24px 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.project-gif {
-    width: 100%;
-    max-height: 600px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 24px 0;
-}
-   .itch-button {
+.itch-button {
     display: inline-block;
-    background-color: #fa5c5c; /* itch.io brand color */
+    background-color: #fa5c5c;
     color: #ffffff;
     padding: 10px 20px;
     font-weight: bold;
@@ -633,4 +610,28 @@ body {
     background-color: #e04b4b;
     transform: translateY(-2px);
 }
+
+.project-image,
+.project-gif {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 24px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: block;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+    .hero-video-overlay {
+        padding-bottom: 24px;
+    }
+
+    .hero-video-title {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
 }
