@@ -594,22 +594,20 @@ body {
    GLOBAL BUTTON & MEDIA STYLES (Applies everywhere)
    ============================================ */
 
-itch-button {
+.itch-button {
     display: inline-block;
-    background-color: #ffffff;  /* White background */
-    color: #000000;              /* Black text */
-    border: 1.5px solid #000000; /* Subtle outline for crisp visibility */
+    background-color: #ffffff;
+    color: #000000;
     padding: 10px 20px;
-    font-weight: 600;
+    font-weight: bold;
     text-decoration: none;
     border-radius: 6px;
     margin-top: 12px;
-    transition: all 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .itch-button:hover {
-    background-color: #000000;  /* Inverts to black on hover */
-    color: #ffffff;              /* Text turns white on hover */
+    background-color: #e04b4b;
     transform: translateY(-2px);
 }
 
