@@ -67,7 +67,7 @@
                 </p>
                 <p>
                     The core loop revolves around navigating through a verticality-rich city in the first linear section, where the player learns the mechanics of the game.
-                    In the second area, the player must use their newly learned skill to defeat multiple waves of enemies to escape the police forces.
+                    In the second area, the player must use their newly learned skills to defeat multiple waves of enemies to escape the police forces.
                 </p>
             </div>
 
@@ -75,7 +75,7 @@
             <div class="project-section">
                 <h3>Technical Details</h3>
                 <p>
-                    <strong>Contribution:</strong> Game Designer (Level Design excluded), Programmer of everything Player related, VFX Artist<br>
+                    <strong>Contribution:</strong> Game Designer (Level Design excluded), Programmer of everything player-related, VFX Artist<br>
                     <strong>Platform:</strong> PC<br>
                     <strong>Engine:</strong> Unreal Engine 5.7<br>
                     <strong>Primary Language:</strong> Blueprint (with C++ for core systems)<br>
@@ -87,13 +87,14 @@
                 </p>
             </div>
 
+            <!-- Section 4: Game Design -->
             <div class="project-section">
                 <h3>Game Design</h3>
                 <p>
-                    The design philosophy behind Massacrade centers on creating a seamless parkour movement and combining it with fast-paced melee combat.
-                    The goal was to keep the player inside a constantly moving Flowstate while navigating a rich art-deco city environment. One of my main design goals was
-                    to emphaize players to chain multiple movement actions into another. I tried to achive this by rewarding the player with raised maximum speed, a better
-                    momentum keep and special mechanics like special jumps.
+                    The design philosophy behind Massacrade centers on creating seamless parkour movement combined with fast-paced melee combat.
+                    The goal was to keep the player in a constantly moving flow state while navigating a rich art-deco city environment. One of my main design goals was
+                    to emphasize chaining multiple movement actions together. I tried to achieve this by rewarding the player with increased maximum speed, better
+                    momentum retention, and special mechanics like special jumps.
                 </p>
                 <p>
                     <strong>Player Controller:</strong> My goal was to make the player feel in control of their movement at any given moment during gameplay.
@@ -105,45 +106,43 @@
                     <strong>WallRun:</strong> Key for gaining height while significantly boosting speed. Development focused on balancing the movement arc and speed gained.
                 </p>
 
-                
-
-    
                 <div class="gif-wrapper">
-                <img src="../../images/Presentation_Wallrun.gif" alt="WallRun Gameplay" class="project-gif">
+                    <img src="../../images/Presentation_Wallrun.gif" alt="WallRun Gameplay" class="project-gif">
                 </div> 
                 
                 <p>
                     <strong>Dash/Dodge:</strong> Allows players to rapidly close distances and maintain forward momentum across wide gaps. Also used to dodge enemy attacks.
-                    Also Features a perfect dodge, when a Player dodges a enemy attack last second, the timeslow ability gets activated withut consuming ability Mana.
+                    Features a perfect dodge mechanic: when a player dodges an enemy attack at the last second, the timeslow ability activates without consuming ability mana.
                 </p>
                 
                 <div class="gif-wrapper">
-                <img src="../../images/Presentation_Dash.gif" alt="Dash Gameplay" class="project-gif">
+                    <img src="../../images/Presentation_Dash.gif" alt="Dash Gameplay" class="project-gif">
                 </div> 
                 
                 <p>
-                    <strong>Vault:</strong> Seamlessly clears low-to-mid height obstacles without disrupting speed or flow. Really helped to make the character feel grounded
-                    and add more interaction between enviorement and player. A double tap of the space bar triggers the launch.
+                    <strong>Vault:</strong> Seamlessly clears low-to-mid height obstacles without disrupting speed or flow. Really helped make the character feel grounded
+                    and add more interaction between environment and player. A double tap of the space bar triggers the vault.
                 </p>
                 
                 <div class="gif-wrapper">
-                <img src="../../images/Presentation_Vault.gif" alt="Vault Gameplay" class="project-gif">
+                    <img src="../../images/Presentation_Vault.gif" alt="Vault Gameplay" class="project-gif">
                 </div> 
                 
                 <p>
                     <strong>Slide:</strong> Used to navigate low clearance areas and maintain speed while transitioning between parkour chains. Can also be used to 
-                    to get behind enemies to ht weakspots.
+                    get behind enemies to hit weak spots.
                 </p>
                 
                 <div class="gif-wrapper">
-                <img src="../../images/Presentation_Slide.gif" alt="Slide Gameplay" class="project-gif">
+                    <img src="../../images/Presentation_Slide.gif" alt="Slide Gameplay" class="project-gif">
                 </div> 
+
                 <p>
-                    <strong>Attack:</strong> A simple forward melee attack that cuts through enemies and weakspots.
+                    <strong>Attack:</strong> A simple forward melee attack that cuts through enemies and weak spots.
                 </p>
 
                 <div class="gif-wrapper">
-                <img src="../../images/Presentation_Slice.gif" alt="Attack Gameplay" class="project-gif">
+                    <img src="../../images/Presentation_Slice.gif" alt="Attack Gameplay" class="project-gif">
                 </div> 
                 
                 <p>
@@ -151,20 +150,19 @@
                 </p>
 
                 <div class="gif-wrapper">
-                <img src="../../images/Presentation_Timeslow.gif" alt="TimeSlow Gameplay" class="project-gif">
+                    <img src="../../images/Presentation_Timeslow.gif" alt="TimeSlow Gameplay" class="project-gif">
                 </div> 
                 
                 <p>
                     <strong>Combat System:</strong> Originally based on hitting multiple randomized enemy weak spots. After playtesting,
-                    this was simplified because precise slicing interrupted the core design goal of continuous movement. Instead of hittig multiple Weakspots at a predetermind postiion
-                    every enemy is either one hit to enforce the Player Fantasay of being a brutal assaisin. Others have a weakspot at the back to enforce good movement and quick thinking.
-                    
+                    this was simplified because precise slicing interrupted the core design goal of continuous movement. Instead of hitting multiple weak spots at predetermined positions,
+                    every enemy is designed to be one-hit to enforce the player fantasy of being a brutal assassin. Others have a weak spot at the back to enforce good movement and quick thinking.
                 </p>
             
                 <p>
                     <strong>Game Feel and Playtesting:</strong> Focused on smooth animation blending, responsive input, and low-latency feedback to prioritize player agency and aggressive, flowing gameplay.
                 </p>
-             </div>
+            </div>
 
             <!-- Section 5: Technical Design -->
             <div class="project-section">
@@ -176,25 +174,24 @@
                 </p>
                 <p>
                     <strong>Gameplay Ability System (GAS):</strong> All character abilities—from basic movement to combat attacks—are implemented 
-                    as GAS abilities. This unified system enables consistent cooldown management, and 
-                    modular ability design that scales with the project complexity. 
+                    as GAS abilities. This unified system enables consistent cooldown management and 
+                    modular ability design that scales with project complexity. 
                 </p>
                 <p>
                     <strong>Camera System:</strong> I developed a sophisticated camera mode stack that dynamically switches between multiple 
                     camera configurations based on character state. The camera responds to movement intensity, combat encounters, and player 
                     input, always prioritizing visibility and communicating game state through positioning and animation.
                 </p>
-                <img src="../../images/RootMotion.png" alt=Rootmotion" class="project-image">
+                
                 <p>
                     <strong>Movement Mechanics:</strong> The parkour system includes running, jumping, wall running, climbing, vaulting, and 
                     sliding. Each ability is carefully tuned for responsiveness, with input buffering to anticipate player actions and create 
-                    the feeling of tight, precise controls even in complex movement chains.
-                    Some abilities are based on a custom node called "Apply root motion constant force" based on the Unreal Lyra Starter game. This allowed me to
-                    cleanly adjust force over time with a curve, while also reducing errors with ground friction and unwanted behaviour.
+                    the feeling of tight, precise controls even in complex movement chains. Some abilities are based on a custom node called "Apply Root Motion Constant Force" based on the Unreal Lyra Starter project. This allowed me to
+                    cleanly adjust force over time with a curve while also reducing errors with ground friction and unwanted behavior.
                 </p>
                 <p>
-                    <strong>Combat and Body Dismemberment Integration:</strong>Based on the shingeunsu Amputation lab asset. Heavily Modified to increase performance 
-                    and project needs.
+                    <strong>Combat and Body Dismemberment Integration:</strong> Based on the Flesh Amputation Lab asset. Heavily modified to increase performance 
+                    and meet project needs.
                 </p>
             </div>
 
@@ -206,8 +203,8 @@
                     interactions. I learned to structure abilities for optimal performance and maintainability.
                 </p>
                 <p>
-                    <strong>Iterative Polish and Game Feel:</strong> Production wise my Roadmap was always based of Feedback from ur Weekly Playtest sessions.
-                    This worked out great to push the character controler and game feel to the next Level.
+                    <strong>Iterative Polish and Game Feel:</strong> My production roadmap was always based on feedback from our weekly playtest sessions.
+                    This worked out great to push the character controller and game feel to the next level.
                 </p>
                 <p>
                     <strong>Team Collaboration:</strong> Working within a team structure of 10+ people taught me the importance of clear 
